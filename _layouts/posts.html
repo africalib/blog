@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+{% assign posts = site.posts | sort:"order" %}
+<div class="post layout">
+    <article>
+        <div class="title">
+            <div class="subject">{{ page.title }}</div>
+            <div class="desc">{{ page.summary }}</div>
+            <div class="date">{{ page.date | date: "%Y-%m-%d" }}</div>
+        </div>
+        <div class="content">{{ content }}</div>
+    </article>
+    {% if page.comments %}
+    <!-- <div class="comment">
+        <script src="https://utteranc.es/client.js" repo="africalib/comments" issue-term="pathname" theme="github-light"
+            crossorigin="anonymous" async>
+            </script>
+        <div class="error d-none">
+            <div>댓글 로딩에 실패했습니다.</div>
+            <a href="#" onclick="location.reload()">다시 시도</a>
+        </div>
+    </div> -->
+    {% endif %}
+    <div class="bottom">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <div>Articles</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in posts %}
+                {% if post.categories == page.categories %}
+                <tr>
+                    <td>
+                        <a href="{{ site.baseurl }}{{ post.url }}"
+                            class="{% if page.url == post.url %} active{% endif %}">{{ post.title }}</a>
+                    </td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="{{ site.baseurl }}/assets/js/post.js"></script>

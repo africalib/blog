@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="home layout">
+    <article>
+        <div class="content">
+            <div class="img">
+                <img src="https://africalib.github.io/img/logo.book.svg" />
+            </div>
+            <div class="txt">
+                <p>프로그래밍이란, 사람이 창의력과 논리력으로, 또 컴퓨터라는 도구를 이용하여 무언가를 만들어내는 것이라고 생각합니다. 이것은 아주 재미있는 일이고 생각하는 힘을 길러주는 멋진
+                    일이라고 생각을 합니다. 이러한 프로그래밍을 하고 싶다면 몇 가지 선택을 해야 합니다.</p>
+
+                <p>첫 번째로 선택할 것은 '무슨 프로그램을 만들 것인가'입니다.<br />
+                    간단하게 메모하는 프로그램을 만들 수도 있고, 내가 좋아하는 게임을 만들 수도 있죠. 회사 업무에 사용할 프로그램을 만들 수도 있고, 개인적으로 사용할 용돈기입장 같은 앱도
+                    만들 수 있습니다.</p>
+
+                <p>두 번째로 선택해야 할 것은 '어떤 기술로 프로그램을 만들것인가'입니다.<br />
+                    이 블로그는 자바스크립트 등 여러가지 프로그래밍 기술에 대해서 안내해드리고 있습니다.</p>
+
+                <p>세 번째로 선택할 것은 '어떻게 프로그래밍을 배울 것인가'입니다.<br />
+                    학교·학원 등 기관을 통해 교육을 이수하는 방법도 있지만 개인적으로 권하는 방법은 인터넷을 통해 '스스로 학습하는 것'입니다. 스스로 학습하시는 일에 이 블로그가 도움이
+                    되면 좋겠습니다.</p>
+            </div>
+        </div>
+    </article>
+    <div class="bottom">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <div>Categories</div>
+                        <span></span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% assign pages = site.pages %}
+                {% for node in pages %}
+                {% if node.title != null %}
+                <tr class="nav-item{% if page.url contains node.url %} active{% endif %}">
+                    <td>
+                        <a href="{{ site.baseurl }}{{ node.url }}">
+                            {{ node.title }}
+                            {% if node.description != null %} - {{ node.description }}{% endif %}
+                        </a>
+                    </td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
