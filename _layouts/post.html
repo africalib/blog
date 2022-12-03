@@ -27,9 +27,10 @@ layout: default
         <table class="table list">
             <thead>
                 <tr>
-                    <th colspan="2">
+                    <th>
                         <div>Articles</div>
                     </th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -40,7 +41,7 @@ layout: default
                         <a href="{{ site.baseurl }}{{ post.url }}"
                             class="{% if page.url == post.url %} active{% endif %}">{{ post.title }}</a>
                     </td>
-                    <td class="text-right">{{ post.date | date: "%Y-%m-%d" }}</td>
+                    <td class="date">{{ post.date | date: "%Y-%m-%d" }}</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
