@@ -58,6 +58,43 @@ body {
     .w700 {
         width: 700px;
     }
+
+    table.list {
+        margin-bottom: 0;
+
+        tr {
+            th {
+                border: 0;
+                padding: 0;
+                padding-bottom: 0.5rem;
+
+                &.page {
+                    width: 5rem;
+                }
+            }
+
+            td {
+                border: 0;
+                padding: 0;
+
+                a {
+                    color: inherit;
+                    padding: 0.25rem 0;
+                    display: inline-block;
+
+                    &.active {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &:last-child{
+                td a {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
 }
 
 .container {
@@ -74,8 +111,15 @@ header {
             >li.nav-item {
                 >a.nav-link {
                     padding-right: 0;
-                    padding-left: 2rem;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
                     font-size: 0.9rem;
+                }
+
+                &:last-child {
+                    a.nav-link {
+                        padding-right: 0;
+                    }
                 }
             }
         }
@@ -96,26 +140,6 @@ header {
 
 main {
     font-size: 0.9rem;
-
-    .home {
-        >article {
-            >.content {
-                .img {
-                    margin: 2rem 0 4rem 0;
-                    text-align: center;
-
-                    img {
-                        width: 200px;
-                    }
-                }
-
-                .txt {
-                    line-height: 1.7;
-                    font-size: 0.9rem;
-                }
-            }
-        }
-    }
 
     .layout {
         position: relative;
@@ -211,34 +235,7 @@ main {
 
 
         >.bottom {
-            padding-bottom: 0rem;
-
-            >table tr {
-                th {
-                    border: 0;
-                    padding: 0;
-                    padding-bottom: 0.5rem;
-
-                    &.page {
-                        width: 5rem;
-                    }
-                }
-
-                td {
-                    border: 0;
-                    padding: 0;
-
-                    a {
-                        color: inherit;
-                        padding: 0.2rem 0;
-                        display: inline-block;
-
-                        &.active {
-                            text-decoration: underline;
-                        }
-                    }
-                }
-            }
+            padding-bottom: 1rem;
 
             >.actions {
                 text-align: center;
@@ -251,13 +248,38 @@ main {
                 }
             }
         }
+
+        &.home {
+            >article {
+                >.content {
+                    .img {
+                        margin: 2rem 0 4rem 0;
+                        text-align: center;
+
+                        img {
+                            width: 200px;
+                            height: 200px;
+                        }
+                    }
+
+                    .txt {
+                        line-height: 1.7;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+
+        &.posts {
+            padding: 2rem 0 1rem;
+        }
     }
 }
 
 footer {
     font-size: 0.9rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     margin-top: 2rem;
     border-top: 0.1rem solid #eee;
 

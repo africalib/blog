@@ -1,5 +1,5 @@
 ---
-layout: redirect
+layout: posts
 title: JavaScript
 description: 자유로운 함수지향 언어
 category: javascript
