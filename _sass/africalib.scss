@@ -112,9 +112,7 @@ header {
         ul.navbar-nav {
             >li.nav-item {
                 >a.nav-link {
-                    padding-right: 0;
                     padding-left: 1rem;
-                    padding-right: 1rem;
                     font-size: 0.9rem;
                 }
 
@@ -147,10 +145,14 @@ main {
         position: relative;
 
         &.home {
+            padding: 1rem 0 0;
+
             >article {
+                padding: 2rem 0;
+
                 >.content {
                     .img {
-                        padding: 3rem 0;
+                        padding: 1rem 0 3rem 0;
                         text-align: center;
 
                         img {
@@ -296,6 +298,10 @@ footer {
 }
 
 @media(max-width:767px) {
+    header nav ul.navbar-nav>li.nav-item>a.nav-link {
+        padding: 0.3rem 0;
+    }
+
     table.list {
         tr td.date {
             display: none;
@@ -303,6 +309,15 @@ footer {
     }
 
     main .layout {
+        &.home {
+            padding: 2rem 0 1rem 0;
+
+            .bottom {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
         &.post {
             padding: 2rem 0 1rem 0;
 
@@ -324,10 +339,6 @@ footer {
 
         &.posts {
             padding-top: 2rem;
-        }
-
-        >.bottom {
-            padding: 1rem;
         }
     }
 

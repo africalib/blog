@@ -11,7 +11,7 @@
                     {% assign pages = site.pages %}
                     {% for node in pages %}
                     {% if node.title != null %}
-                    <li class="nav-item {% if page.url contains node.url %}active{% endif %}">
+                    <li class="nav-item{% if page.url contains node.url %} active{% endif %}">
                         <a class="nav-link" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
                     </li>
                     {% endif %}
