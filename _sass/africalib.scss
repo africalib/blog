@@ -88,7 +88,7 @@ body {
                 }
             }
 
-            &:last-child{
+            &:last-child {
                 td a {
                     padding-bottom: 0;
                 }
@@ -233,7 +233,6 @@ main {
             }
         }
 
-
         >.bottom {
             padding-bottom: 1rem;
 
@@ -272,6 +271,17 @@ main {
 
         &.posts {
             padding: 2rem 0 1rem;
+        }
+    }
+
+    .p404 {
+        padding: 4rem 0 1rem 0;
+
+        h1 {
+            font-size: 4em;
+            line-height: 1;
+            letter-spacing: -1px;
+            padding-bottom: 0.5rem;
         }
     }
 }
